@@ -30,7 +30,8 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel',
 				query: {
-					presets: ['es2015', 'stage-1', 'react']
+					presets: ['es2015', 'stage-1', 'react'],
+					plugins: ['transform-flow-strip-types', 'transform-decorators-legacy']
 				},
 				include: path.join(__dirname, 'src')
 			},

@@ -8,7 +8,7 @@ const style = {
 
 		color: 'rgba(0,0,0,.54)',
 		fontSize:'1.2rem',
-		lineHeight: '1rem',
+		lineHeight: '2rem',
 
 		listStyleType:'none'
 	},
