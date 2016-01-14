@@ -1,22 +1,23 @@
 import React from 'react'
+
 import ResultStat from './ResultStat'
+import ResultTags from './ResultTags'
+
+import * as Colors from 'material-ui/lib/styles/colors'
 
 const styles = {
-	height: '6rem',
+	minHeight: '6rem',
 	padding: '0 1rem',
 
 	lineHeight: '3rem'
 }
 
-export default ({ children }) => (
+
+export default ({ tag_names, views, answers, children }) => (
 	<div style={styles}>
-		<ResultStat type="Views">0</ResultStat>
-		<ResultStat type="Answers">1</ResultStat>
-		<div style={{display: 'inline-block', height: '3rem', marginLeft: '1rem'}}>{children}</div><br />
-		<ul style={{display: 'inline-block', height: '3rem', padding: '0', margin: '0 0 0 1rem', listStyleType:'none'}}>
-			<li style={{display:'inline-block'}}>Tag</li>
-			<li style={{display:'inline-block'}}>Tag</li>
-			<li style={{display:'inline-block'}}>Tag</li>
-		</ul>
+		<ResultStat style={{color: 'rgba(0,0,0,.54)'}} type="Views">{views}</ResultStat>
+		<ResultStat style={{marginRight: '2rem', backgroundColor: answers > 0 ? Colors.green100 : 'transparent' }} type="Answers">{answers}</ResultStat>
+		<div style={{ lineHeight: '4rem'}}>{children}</div>
+		<ResultTags tag_names={tag_names} />
 	</div>
 )

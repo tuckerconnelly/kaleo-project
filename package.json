@@ -21,7 +21,9 @@
     "url": "https://github.com/tuckerconnelly/app.git"
   },
   "dependencies": {
+    "debounce": "^1.0.0",
     "immutable": "^3.7.6",
+    "isomorphic-fetch": "^2.2.0",
     "material-ui": "^0.14.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
@@ -29,7 +31,8 @@
     "react-style": "^0.5.5",
     "react-tap-event-plugin": "^0.2.1",
     "redux": "^3.0.5",
-    "redux-devtools": "^3.0.1"
+    "redux-devtools": "^3.0.1",
+    "redux-thunk": "^1.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",
@@ -64,6 +67,7 @@
     "jsdom": "^7.2.2",
     "mocha": "^2.3.4",
     "path": "^0.12.7",
+    "radium": "^0.16.2",
     "rimraf": "^2.5.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",

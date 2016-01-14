@@ -1,2 +1,2 @@
-export const OPEN_MENU = 'OPEN_MENU'
-export const CLOSE_MENU = 'CLOSE_MENU'
+export const UPDATE_SEARCH_TEXT = 'UPDATE_SEARCH_TEXT'
+export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'

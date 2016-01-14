@@ -1,9 +1,15 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 import rootReducer from '../reducers'
 
 export default function configureStore(initialState) {
+	const finalCreateStore = compose(
+		applyMiddleware(thunk),
+		window.devToolsExtension ? window.devToolsExtension() : (f) => f
+	)(createStore)
+
 	// Enable redux dev tools Chrome extension
-	const store = (window.devToolsExtension ? window.devToolsExtension()(createStore) : createStore)(rootReducer, initialState)
+	const store = finalCreateStore(rootReducer, initialState)
 
 	if (module.hot) {
 		// Enable Webpack hot module replacement for reducers
